@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bài tập 4: Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm">
+  <title>Bài 4: Hợp tác trực tuyến | Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">✦ Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Giới thiệu</a></li>
+        <li><a href="../projects.html" class="active">Dự án</a></li>
+        <li><a href="../summary.html">Tổng kết</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../projects.html">Dự án</a>
+        <span class="separator">/</span>
+        <span>Bài tập 4</span>
+      </nav>
+      <h1 class="page-title">
+        <span class="gradient-text">Sử dụng công cụ hợp tác trực tuyến</span>
+      </h1>
+      <p class="page-description">
+        Bài tập 3 của mục 4.4 — Tích hợp các tính năng nâng cao, mô tả chi tiết 
+        cách tối ưu hóa quy trình làm việc nhóm trong môi trường số.
+      </p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container" style="max-width: 900px;">
+
+      <!-- Mục tiêu -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🎯</span> Mục tiêu bài tập</h2>
+        <p>
+          Trải nghiệm và đánh giá các công cụ hợp tác trực tuyến phổ biến, 
+          từ đó phát triển kỹ năng quản lý dự án nhóm và phối hợp làm việc từ xa hiệu quả. 
+          Bài tập tập trung vào việc <strong>tối ưu hóa quy trình</strong> thay vì chỉ sử dụng công cụ đơn thuần.
+        </p>
+      </div>
+
+      <!-- Công cụ sử dụng -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🛠️</span> Các công cụ đã sử dụng</h2>
+
+        <div class="goals-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+          <div class="glass-card" style="padding: var(--space-xl);">
+            <span style="font-size: 2rem; display: block; margin-bottom: var(--space-md);">📋</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-sm);">Trello / Notion</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-md);">
+              Quản lý dự án theo phương pháp Kanban. Tạo board với các cột: To Do, In Progress, Review, Done.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Kanban</span>
+              <span class="tag">Task Management</span>
+            </div>
+          </div>
+
+          <div class="glass-card" style="padding: var(--space-xl);">
+            <span style="font-size: 2rem; display: block; margin-bottom: var(--space-md);">📝</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-sm);">Google Docs / Sheets</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-md);">
+              Soạn thảo tài liệu cộng tác thời gian thực. Sử dụng comment, suggestion mode để review.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Collaborative Editing</span>
+              <span class="tag">Real-time</span>
+            </div>
+          </div>
+
+          <div class="glass-card" style="padding: var(--space-xl);">
+            <span style="font-size: 2rem; display: block; margin-bottom: var(--space-md);">💬</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-sm);">Discord / Zalo</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-md);">
+              Giao tiếp nhóm qua kênh chat và voice call. Tạo kênh riêng cho từng chủ đề.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Communication</span>
+              <span class="tag">Voice Call</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quy trình làm việc -->
+      <div class="content-block reveal">
+        <h2><span class="icon">⚙️</span> Quy trình làm việc nhóm đã tối ưu</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Giai đoạn 1</div>
+            <div class="timeline-title">Lên kế hoạch & phân công</div>
+            <div class="timeline-desc">
+              Tạo board trên Trello/Notion, chia nhỏ dự án thành các task cụ thể. 
+              Phân công dựa trên năng lực và sở trường của từng thành viên. 
+              Đặt deadline cho từng giai đoạn.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Giai đoạn 2</div>
+            <div class="timeline-title">Thực hiện & theo dõi</div>
+            <div class="timeline-desc">
+              Mỗi thành viên cập nhật tiến độ task hàng ngày. Sử dụng label (màu sắc) 
+              để đánh dấu độ ưu tiên. Daily standup ngắn qua Discord để đồng bộ.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Giai đoạn 3</div>
+            <div class="timeline-title">Review & góp ý</div>
+            <div class="timeline-desc">
+              Sử dụng Suggestion Mode trên Google Docs để review chéo. 
+              Mỗi thành viên review ít nhất 1 phần của người khác trước khi hoàn thành.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Giai đoạn 4</div>
+            <div class="timeline-title">Tổng hợp & nộp</div>
+            <div class="timeline-desc">
+              Merge tất cả phần vào tài liệu chính. Kiểm tra format, chính tả. 
+              Lưu trữ phiên bản cuối trên Google Drive với quy tắc đặt tên rõ ràng.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ảnh chụp minh họa -->
+      <div class="content-block reveal">
+        <h2><span class="icon">📸</span> Ảnh chụp minh họa</h2>
+
+        <div class="image-placeholder">
+          <span class="ph-icon">🖼️</span>
+          <span><strong>Thêm ảnh chụp Trello/Notion board tại đây</strong></span>
+          <span>Ảnh board quản lý dự án với các task đã phân công</span>
+        </div>
+
+        <div class="image-placeholder">
+          <span class="ph-icon">🖼️</span>
+          <span><strong>Thêm ảnh chụp Google Docs collaboration tại đây</strong></span>
+          <span>Ảnh minh họa nhiều người cùng chỉnh sửa tài liệu</span>
+        </div>
+
+        <div class="image-placeholder">
+          <span class="ph-icon">🖼️</span>
+          <span><strong>Thêm ảnh chụp kênh Discord/Zalo tại đây</strong></span>
+          <span>Ảnh kênh chat nhóm với các cuộc thảo luận</span>
+        </div>
+      </div>
+
+      <!-- Tính năng nâng cao -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🚀</span> Tính năng nâng cao đã tích hợp</h2>
+
+        <div class="highlight-box">
+          <h4>🔄 Automation với Trello Butler / Notion Automations</h4>
+          <p>
+            Thiết lập rule tự động: khi task được chuyển sang cột "Done", tự động gửi 
+            thông báo cho nhóm trưởng. Khi deadline còn 1 ngày, tự động thêm label "Urgent".
+          </p>
+        </div>
+
+        <div class="highlight-box emerald">
+          <h4>📊 Dashboard theo dõi tiến độ</h4>
+          <p>
+            Tạo view Calendar và Timeline trên Notion để visual hóa tiến độ dự án. 
+            Sử dụng filter và sort để nhanh chóng xem task nào đang trễ deadline.
+          </p>
+        </div>
+
+        <div class="highlight-box blue">
+          <h4>📎 Tích hợp đa nền tảng</h4>
+          <p>
+            Kết nối Trello với Discord thông qua Webhook để tự động post thông báo 
+            khi có task mới hoặc task hoàn thành. Giúp mọi người cập nhật mà không 
+            cần mở nhiều ứng dụng.
+          </p>
+        </div>
+      </div>
+
+      <!-- Nhận xét -->
+      <div class="content-block reveal">
+        <h2><span class="icon">💭</span> Nhận xét cá nhân</h2>
+        <div class="glass-card reflection-card">
+          <div class="quote">
+            "Công cụ chỉ là phương tiện — quy trình và con người mới là yếu tố quyết định 
+            sự thành công của làm việc nhóm."
+          </div>
+          <p style="color: var(--text-secondary);">
+            Qua bài tập này, tôi học được rằng việc chọn và sử dụng đúng công cụ có thể 
+            <strong>giảm 40-50% thời gian</strong> phối hợp nhóm. Tuy nhiên, điều quan trọng hơn là 
+            xây dựng <strong>quy trình rõ ràng</strong> và đảm bảo mọi thành viên đều hiểu và tuân thủ. 
+            Kỹ năng hợp tác trực tuyến sẽ ngày càng quan trọng trong thế giới làm việc hybrid.
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div style="display: flex; justify-content: space-between; margin-top: var(--space-3xl);" class="reveal">
+        <a href="bai3-prompt-engineering.html" class="btn btn-secondary">← Bài tập 3</a>
+        <a href="bai5-ai-content.html" class="btn btn-primary">Bài tập 5 →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">✦ Portfolio Kỹ Thuật Số</div>
+        <p class="footer-text">© 2025 Nguyễn Văn A — Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

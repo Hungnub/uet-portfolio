@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tổng kết quá trình học tập và đánh giá bản thân sau khóa học">
+  <title>Tổng kết Portfolio | Portfolio Kỹ Thuật Số</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">✦ Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Giới thiệu</a></li>
+        <li><a href="projects.html">Dự án</a></li>
+        <li><a href="summary.html" class="active">Tổng kết</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="hero-badge" style="background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.2); color: var(--accent-purple-light);">
+        <span class="dot" style="background: var(--accent-purple-light);"></span>
+        Đánh giá & Phản ngẫm
+      </div>
+      <h1 class="page-title">
+        <span class="gradient-text">Tổng kết hành trình học tập</span>
+      </h1>
+      <p class="page-description">
+        Nhìn lại quá trình xây dựng Portfolio và môn học Nhập môn Công nghệ số: 
+        Những kiến thức đạt được, thách thức đối mặt và bài học kinh nghiệm.
+      </p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+
+      <div class="about-grid">
+        <!-- Cảm nhận chung -->
+        <div class="glass-card reveal">
+          <h2 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: var(--space-md); display: flex; align-items: center; gap: var(--space-sm);">
+            <span style="font-size: 1.8rem;">🌟</span> Trải nghiệm & Cảm nhận
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: var(--space-md);">
+            Quá trình xây dựng dự án Portfolio này là một hành trình phản ngẫm (reflection) cực kỳ giá trị. 
+            Nó không chỉ là việc tạo ra một trang web để nộp bài, mà là cơ hội để hệ thống hóa lại 
+            toàn bộ kiến thức rời rạc thành một bộ kỹ năng thống nhất.
+          </p>
+          <div class="quote" style="border-left: 3px solid var(--accent-purple); padding-left: var(--space-md); margin-top: var(--space-lg); font-style: italic; color: var(--text-primary);">
+            "Chuyển đổi số không phải là vấn đề của công nghệ, mà là vấn đề của tư duy. Khóa học này đã 
+            giúp tôi chuyển đổi tư duy của chính mình."
+          </div>
+        </div>
+
+        <!-- Kiến thức & Kỹ năng -->
+        <div class="glass-card reveal reveal-delay-1">
+          <h2 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: var(--space-md); display: flex; align-items: center; gap: var(--space-sm);">
+            <span style="font-size: 1.8rem;">🚀</span> Kỹ năng cốt lõi đã học
+          </h2>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: var(--space-sm); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-subtle);">
+              <strong style="color: var(--accent-emerald-light);">1. Kỹ năng tìm kiếm và xác thực (Information Literacy):</strong> 
+              <span style="color: var(--text-secondary); display: block; font-size: 0.9rem;">Không còn tin tưởng mù quáng vào Google hay AI, biết cách kiểm chứng chéo thông tin.</span>
+            </li>
+            <li style="margin-bottom: var(--space-sm); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-subtle);">
+              <strong style="color: var(--accent-purple-light);">2. Prompt Engineering:</strong> 
+              <span style="color: var(--text-secondary); display: block; font-size: 0.9rem;">Khả năng giao tiếp và "điều khiển" các mô hình ngôn ngữ lớn để phục vụ công việc.</span>
+            </li>
+            <li style="margin-bottom: var(--space-sm); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-subtle);">
+              <strong style="color: var(--accent-blue);">3. Quản lý công việc số:</strong> 
+              <span style="color: var(--text-secondary); display: block; font-size: 0.9rem;">Tổ chức file khoa học, làm việc nhóm mượt mà trên nền tảng đám mây.</span>
+            </li>
+            <li>
+              <strong style="color: var(--accent-amber);">4. Đạo đức số:</strong> 
+              <span style="color: var(--text-secondary); display: block; font-size: 0.9rem;">Ý thức sâu sắc về bản quyền, bảo mật dữ liệu và sự minh bạch khi dùng AI.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Thách thức & Bài học -->
+      <div class="content-block reveal" style="margin-top: var(--space-4xl);">
+        <h2 style="text-align: center; justify-content: center; margin-bottom: var(--space-2xl);">Thách thức & Bài học kinh nghiệm</h2>
+        
+        <div class="comparison-grid">
+          <div class="glass-card" style="padding: var(--space-xl);">
+            <div style="font-size: 2rem; margin-bottom: var(--space-md);">🧗‍♂️</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: var(--space-sm);">Thách thức đã gặp</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+              Ban đầu, tôi khá loay hoay với việc <strong>quản lý thời gian</strong> khi phải tổng hợp lại khối lượng 
+              kiến thức lớn. Việc trình bày nội dung sao cho không bị khô khan mà vẫn đảm bảo tính học thuật 
+              cũng là một rào cản. Đôi khi, tôi bị <strong>phụ thuộc quá nhiều vào AI</strong> trong giai đoạn đầu 
+              và phải sửa đổi lại rất nhiều để mang dấu ấn cá nhân.
+            </p>
+          </div>
+          
+          <div class="glass-card" style="padding: var(--space-xl);">
+            <div style="font-size: 2rem; margin-bottom: var(--space-md);">💡</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: var(--space-sm);">Bài học rút ra</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+              Tôi nhận ra rằng <strong>hệ thống hóa là chìa khóa</strong>. Khi cấu trúc thư mục và quy trình làm việc 
+              được thiết lập tốt từ Bài tập 1 và 4, mọi thứ trở nên trơn tru hơn nhiều. Bài học lớn nhất 
+              là tư duy: <em>Công cụ (Dù là Google hay ChatGPT) chỉ mạnh khi người dùng có đủ kiến thức nền 
+              để đánh giá kết quả của nó.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lời kết -->
+      <div class="content-block reveal" style="text-align: center; margin-top: var(--space-4xl);">
+        <div class="highlight-box" style="display: inline-block; text-align: left; max-width: 700px;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: var(--space-md); color: var(--text-primary);">Hướng tới tương lai</h3>
+          <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.8;">
+            Portfolio này không phải là điểm kết thúc, mà là <strong>nền tảng số (digital footprint)</strong> đầu tiên 
+            của tôi. Trong tương lai, tôi dự định sẽ tiếp tục cập nhật trang web này với các dự án 
+            nghiên cứu mới, biến nó thành một "CV sống" thể hiện hành trình phát triển liên tục 
+            trong kỷ nguyên số.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">✦ Portfolio Kỹ Thuật Số</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Giới thiệu</a></li>
+          <li><a href="projects.html">Dự án</a></li>
+          <li><a href="summary.html">Tổng kết</a></li>
+        </ul>
+        <p class="footer-text">
+          © 2025 Nguyễn Văn A — Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

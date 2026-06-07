@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bài tập 3: Viết Prompt hiệu quả cho các tác vụ học tập - Prompt Engineering">
+  <title>Bài 3: Viết Prompt hiệu quả | Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">✦ Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Giới thiệu</a></li>
+        <li><a href="../projects.html" class="active">Dự án</a></li>
+        <li><a href="../summary.html">Tổng kết</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../projects.html">Dự án</a>
+        <span class="separator">/</span>
+        <span>Bài tập 3</span>
+      </nav>
+      <h1 class="page-title">
+        <span class="gradient-text">Viết Prompt hiệu quả cho các tác vụ học tập</span>
+      </h1>
+      <p class="page-description">
+        Bài tập 2 của mục 3.4 — Áp dụng thành thạo kỹ thuật Prompt Engineering, 
+        so sánh sâu sắc về cơ chế hoạt động của AI.
+      </p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container" style="max-width: 900px;">
+
+      <!-- Mục tiêu -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🎯</span> Mục tiêu bài tập</h2>
+        <p>
+          Rèn luyện kỹ năng viết Prompt (câu lệnh) hiệu quả khi làm việc với các công cụ AI tạo sinh 
+          như ChatGPT, Gemini. Hiểu rõ <strong>cơ chế hoạt động</strong> của AI ngôn ngữ lớn (LLM) 
+          và cách tối ưu hóa đầu vào để nhận được đầu ra chất lượng cao.
+        </p>
+      </div>
+
+      <!-- Nguyên tắc Prompt Engineering -->
+      <div class="content-block reveal">
+        <h2><span class="icon">📐</span> Nguyên tắc Prompt Engineering</h2>
+        <p>
+          Qua nghiên cứu và thực hành, tôi đã tổng kết các nguyên tắc cốt lõi khi viết Prompt:
+        </p>
+
+        <div class="goals-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+          <div class="glass-card" style="padding: var(--space-lg); text-align: center;">
+            <span style="font-size: 2rem; display: block; margin-bottom: var(--space-sm);">🎭</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">Vai trò (Role)</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Gán vai trò cụ thể cho AI để nhận câu trả lời chuyên sâu hơn</p>
+          </div>
+          <div class="glass-card" style="padding: var(--space-lg); text-align: center;">
+            <span style="font-size: 2rem; display: block; margin-bottom: var(--space-sm);">🎯</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">Nhiệm vụ (Task)</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Mô tả rõ ràng nhiệm vụ cần thực hiện</p>
+          </div>
+          <div class="glass-card" style="padding: var(--space-lg); text-align: center;">
+            <span style="font-size: 2rem; display: block; margin-bottom: var(--space-sm);">📋</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">Bối cảnh (Context)</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Cung cấp đủ thông tin nền cho AI hiểu bối cảnh</p>
+          </div>
+          <div class="glass-card" style="padding: var(--space-lg); text-align: center;">
+            <span style="font-size: 2rem; display: block; margin-bottom: var(--space-sm);">📏</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">Định dạng (Format)</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Chỉ định rõ format đầu ra mong muốn</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- So sánh Prompt -->
+      <div class="content-block reveal">
+        <h2><span class="icon">⚡</span> So sánh Prompt: Trước và Sau cải tiến</h2>
+
+        <h3>Ví dụ 1: Yêu cầu giải thích khái niệm</h3>
+        <div class="comparison-grid">
+          <div class="glass-card comparison-card before">
+            <div class="comparison-label">Prompt ban đầu</div>
+            <div class="code-block" style="margin-bottom: var(--space-md);">
+Giải thích machine learning cho tôi
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              <strong>Vấn đề:</strong> Quá chung chung, không có ngữ cảnh, không chỉ định mức độ chi tiết hay đối tượng.
+            </p>
+          </div>
+          <div class="glass-card comparison-card after">
+            <div class="comparison-label">Prompt cải tiến</div>
+            <div class="code-block" style="margin-bottom: var(--space-md);">
+Bạn là một giảng viên Khoa học Máy tính. 
+Hãy giải thích khái niệm Machine Learning 
+cho sinh viên năm nhất ngành CNTT với:
+- 3 ý chính, mỗi ý kèm ví dụ thực tế
+- So sánh với lập trình truyền thống
+- Một sơ đồ text mô tả quy trình ML
+- Độ dài: khoảng 500 từ
+            </div>
+            <p style="font-size: 0.85rem; color: var(--accent-emerald-light);">
+              <strong>Cải tiến:</strong> Có vai trò, bối cảnh, yêu cầu cụ thể, format rõ ràng.
+            </p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: var(--space-2xl);">Ví dụ 2: Yêu cầu viết báo cáo</h3>
+        <div class="comparison-grid">
+          <div class="glass-card comparison-card before">
+            <div class="comparison-label">Prompt ban đầu</div>
+            <div class="code-block" style="margin-bottom: var(--space-md);">
+Viết báo cáo về AI
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              <strong>Vấn đề:</strong> Không rõ loại báo cáo, phạm vi, đối tượng đọc, hay yêu cầu format.
+            </p>
+          </div>
+          <div class="glass-card comparison-card after">
+            <div class="comparison-label">Prompt cải tiến</div>
+            <div class="code-block" style="margin-bottom: var(--space-md);">
+Vai trò: Bạn là chuyên gia phân tích công nghệ.
+
+Nhiệm vụ: Viết một báo cáo phân tích về 
+"Tác động của AI tạo sinh đến giáo dục đại 
+học tại Việt Nam năm 2024-2025".
+
+Yêu cầu:
+1. Cấu trúc: Mở đầu → 3 tác động tích cực 
+   → 2 thách thức → Khuyến nghị → Kết luận
+2. Mỗi điểm kèm dẫn chứng/số liệu cụ thể
+3. Giọng văn: học thuật nhưng dễ hiểu
+4. Độ dài: 800-1000 từ
+5. Thêm phần "Tài liệu tham khảo gợi ý"
+            </div>
+            <p style="font-size: 0.85rem; color: var(--accent-emerald-light);">
+              <strong>Cải tiến:</strong> Chi tiết, có cấu trúc rõ ràng, giọng văn, độ dài cụ thể.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phân tích cơ chế AI -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🧠</span> Cơ chế hoạt động của AI và tại sao Prompt quan trọng</h2>
+
+        <div class="highlight-box">
+          <h4>🔬 Hiểu về Large Language Models (LLMs)</h4>
+          <p>
+            Các mô hình ngôn ngữ lớn như GPT, Gemini hoạt động dựa trên cơ chế <strong>dự đoán token tiếp theo</strong>. 
+            Chúng không "hiểu" ngôn ngữ theo cách con người, mà sử dụng xác suất thống kê để tạo ra 
+            chuỗi từ có khả năng cao nhất phù hợp với đầu vào. Điều này giải thích tại sao 
+            <strong>chất lượng đầu vào quyết định chất lượng đầu ra</strong>.
+          </p>
+        </div>
+
+        <div class="highlight-box emerald">
+          <h4>🎯 Tại sao Prompt Engineering quan trọng?</h4>
+          <p>
+            Khi cung cấp Prompt chi tiết (vai trò, bối cảnh, format), chúng ta đang <strong>"hướng dẫn"</strong> 
+            mô hình tập trung vào không gian xác suất cụ thể, giảm thiểu sự mơ hồ và tăng 
+            khả năng nhận được kết quả phù hợp. Đây là lý do một Prompt tốt có thể cải thiện 
+            chất lượng đầu ra lên <strong>gấp 3-5 lần</strong> so với Prompt chung chung.
+          </p>
+        </div>
+
+        <div class="highlight-box blue">
+          <h4>⚠️ Hạn chế cần biết</h4>
+          <p>
+            Dù Prompt tốt đến đâu, AI vẫn có thể <strong>"hallucinate"</strong> (tạo thông tin sai). 
+            Do đó, luôn cần kiểm chứng thông tin AI cung cấp, đặc biệt với dữ liệu số liệu, 
+            trích dẫn, và sự kiện cụ thể. Prompt Engineering là kỹ năng hữu ích nhưng không thay thế 
+            được tư duy phản biện của con người.
+          </p>
+        </div>
+      </div>
+
+      <!-- Nhận xét -->
+      <div class="content-block reveal">
+        <h2><span class="icon">💭</span> Nhận xét cá nhân</h2>
+        <div class="glass-card reflection-card">
+          <div class="quote">
+            "Prompt Engineering không chỉ là viết câu lệnh cho AI — nó là nghệ thuật 
+            giao tiếp chính xác, một kỹ năng giá trị trong mọi lĩnh vực."
+          </div>
+          <p style="color: var(--text-secondary);">
+            Qua bài tập này, tôi nhận ra rằng kỹ năng <strong>diễn đạt ý tưởng rõ ràng, có cấu trúc</strong> 
+            là cốt lõi của Prompt Engineering. Đây cũng là kỹ năng mềm quan trọng trong 
+            giao tiếp hàng ngày, viết email chuyên nghiệp, hay trình bày dự án. AI chỉ là 
+            công cụ — người sử dụng mới là yếu tố quyết định chất lượng đầu ra.
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div style="display: flex; justify-content: space-between; margin-top: var(--space-3xl);" class="reveal">
+        <a href="bai2-search-evaluate.html" class="btn btn-secondary">← Bài tập 2</a>
+        <a href="bai4-collaboration.html" class="btn btn-primary">Bài tập 4 →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">✦ Portfolio Kỹ Thuật Số</div>
+        <p class="footer-text">© 2025 Nguyễn Văn A — Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

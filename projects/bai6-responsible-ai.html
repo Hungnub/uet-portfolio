@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bài tập 6: Sử dụng AI có trách nhiệm trong học tập và nghiên cứu">
+  <title>Bài 6: AI có trách nhiệm | Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">✦ Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Giới thiệu</a></li>
+        <li><a href="../projects.html" class="active">Dự án</a></li>
+        <li><a href="../summary.html">Tổng kết</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../projects.html">Dự án</a>
+        <span class="separator">/</span>
+        <span>Bài tập 6</span>
+      </nav>
+      <h1 class="page-title">
+        <span class="gradient-text">Sử dụng AI có trách nhiệm</span>
+      </h1>
+      <p class="page-description">
+        Bài tập 6 của mục 6.4 — Trình bày bộ nguyên tắc cá nhân rõ ràng về sử dụng 
+        AI có trách nhiệm dựa trên các nghiên cứu đã thực hiện. Đề xuất giải pháp 
+        cho các thách thức đạo đức.
+      </p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container" style="max-width: 900px;">
+
+      <!-- Mục tiêu -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🎯</span> Mục tiêu bài tập</h2>
+        <p>
+          Phân tích các vấn đề đạo đức liên quan đến Trí tuệ Nhân tạo. Xây dựng một 
+          <strong>bộ nguyên tắc ứng xử cá nhân</strong> khi sử dụng AI trong môi trường học thuật 
+          và nghiên cứu, đảm bảo tính liêm chính, minh bạch và an toàn thông tin.
+        </p>
+      </div>
+
+      <!-- Thách thức đạo đức -->
+      <div class="content-block reveal">
+        <h2><span class="icon">⚖️</span> Các thách thức đạo đức của AI</h2>
+        <p>Qua nghiên cứu, tôi nhận diện 4 rủi ro và thách thức đạo đức chính khi sinh viên sử dụng AI:</p>
+
+        <div class="comparison-grid">
+          <div class="glass-card" style="padding: var(--space-xl); border-left: 3px solid var(--accent-pink);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-sm);">1. Liêm chính học thuật (Đạo văn)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Việc copy-paste toàn bộ nội dung AI tạo ra và nộp dưới tên mình phá hoại mục đích của giáo dục 
+              (học hỏi kỹ năng) và vi phạm nội quy của trường.
+            </p>
+          </div>
+          <div class="glass-card" style="padding: var(--space-xl); border-left: 3px solid var(--accent-amber);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-sm);">2. Ảo giác AI (Hallucinations)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              AI có thể bịa đặt thông tin, trích dẫn giả, hoặc số liệu sai lệch với sự tự tin cao. 
+              Tin tưởng mù quáng dẫn đến sai sót nghiêm trọng trong nghiên cứu.
+            </p>
+          </div>
+          <div class="glass-card" style="padding: var(--space-xl); border-left: 3px solid var(--accent-blue);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-sm);">3. Quyền riêng tư & Bảo mật</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Đưa thông tin cá nhân, dữ liệu chưa công bố, hoặc code độc quyền vào prompt 
+              có thể vô tình làm lộ dữ liệu nhạy cảm cho các công ty huấn luyện AI.
+            </p>
+          </div>
+          <div class="glass-card" style="padding: var(--space-xl); border-left: 3px solid var(--accent-purple);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-sm);">4. Thiên kiến (Bias)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              AI được huấn luyện trên dữ liệu Internet, do đó nó kế thừa và khuếch đại các định kiến 
+              (về giới tính, chủng tộc, văn hóa). Sinh viên cần nhận thức để không lan truyền bias.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bộ nguyên tắc cá nhân -->
+      <div class="content-block reveal">
+        <h2><span class="icon">📜</span> Bộ nguyên tắc cá nhân (5 Điều)</h2>
+        <p>Để đối phó với các thách thức trên, tôi cam kết tuân thủ 5 nguyên tắc sau khi sử dụng AI:</p>
+
+        <ol class="principles-list">
+          <li>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-xs); color: var(--text-primary);">Minh bạch nguồn gốc (Transparency)</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">
+                Luôn khai báo rõ ràng các phần nội dung có sự hỗ trợ của AI (ví dụ: dùng AI để dàn ý, dịch thuật, 
+                sửa lỗi ngữ pháp, hay viết code). Không bao giờ nộp sản phẩm 100% sinh ra bởi AI.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-xs); color: var(--text-primary);">Thẩm định sự thật (Fact-checking)</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">
+                Bản thân tôi là người chịu trách nhiệm cuối cùng cho độ chính xác của bài làm. 
+                Mọi sự kiện, số liệu, và trích dẫn do AI cung cấp phải được kiểm chứng (cross-check) 
+                bằng các nguồn học thuật uy tín (như ở Bài 2).
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-xs); color: var(--text-primary);">Bảo vệ dữ liệu (Data Privacy)</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">
+                Tuyệt đối không nhập thông tin định danh cá nhân (PII), dữ liệu nghiên cứu chưa công bố 
+                của nhóm/giảng viên, hoặc mã nguồn có bản quyền vào các chatbot AI công cộng.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-xs); color: var(--text-primary);">Sử dụng AI như Co-pilot, không phải Autopilot</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">
+                Sử dụng AI để vượt qua "trang giấy trắng" (brainstorming), gỡ lỗi (debugging), 
+                hoặc tối ưu hóa quy trình. Quyết định logic chính, lập luận cốt lõi và tư duy phản biện 
+                phải đến từ bộ não con người.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-xs); color: var(--text-primary);">Tôn trọng bản quyền (Copyright Awareness)</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">
+                Thận trọng khi sử dụng AI tạo ảnh/âm thanh/video cho mục đích thương mại hoặc công bố rộng rãi. 
+                Cố gắng tạo ra dấu ấn cá nhân để phân biệt tác phẩm của mình với hàng loạt nội dung AI sinh ra.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Đề xuất giải pháp -->
+      <div class="content-block reveal">
+        <h2><span class="icon">💡</span> Đề xuất giải pháp cho sinh viên</h2>
+
+        <div class="highlight-box emerald">
+          <h4>Giải pháp: "Hộp đen" thành "Hộp kính"</h4>
+          <p>
+            Để giáo viên tin tưởng, thay vì chỉ nộp bài luận cuối cùng (hộp đen), sinh viên nên nộp 
+            kèm <strong>"Nhật ký sử dụng AI"</strong> (hộp kính) bao gồm: Link đoạn chat với AI, các prompt đã dùng, 
+            và giải thích lý do tại sao chấp nhận/bác bỏ ý kiến của AI. Điều này chứng minh 
+            quá trình tư duy phản biện.
+          </p>
+        </div>
+      </div>
+
+      <!-- Nhận xét -->
+      <div class="content-block reveal">
+        <h2><span class="icon">💭</span> Nhận xét cá nhân</h2>
+        <div class="glass-card reflection-card">
+          <div class="quote">
+            "Công nghệ đi trước đạo đức một bước. Trách nhiệm của người học là rút ngắn khoảng cách đó."
+          </div>
+          <p style="color: var(--text-secondary);">
+            Bộ nguyên tắc này không nhằm cấm đoán việc sử dụng AI — ngược lại, nó tạo ra một hành lang an toàn 
+            để tôi có thể tận dụng sức mạnh của AI một cách tối đa mà không đánh mất đi cốt lõi của 
+            việc học tập: sự phát triển của tư duy và trí tuệ bản thân.
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div style="display: flex; justify-content: space-between; margin-top: var(--space-3xl);" class="reveal">
+        <a href="bai5-ai-content.html" class="btn btn-secondary">← Bài tập 5</a>
+        <a href="../summary.html" class="btn btn-primary">Xem Tổng kết →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">✦ Portfolio Kỹ Thuật Số</div>
+        <p class="footer-text">© 2025 Nguyễn Văn A — Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

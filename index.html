@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio Kỹ Thuật Số - Thể hiện kiến thức và kỹ năng công nghệ số & trí tuệ nhân tạo">
+  <title>Portfolio Kỹ Thuật Số | Trang Giới Thiệu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">✦ Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Giới thiệu</a></li>
+        <li><a href="projects.html">Dự án</a></li>
+        <li><a href="summary.html">Tổng kết</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Portfolio Kỹ Thuật Số 2026
+      </div>
+      <p class="hero-greeting">Xin chào, Em là</p>
+      <h1 class="hero-title">
+        <span class="gradient-text">Lê Duy Hưng</span>
+      </h1>
+      <p class="hero-subtitle">
+        Sinh viên ngành Trí Tuệ Nhân Tạo — Đam mê khám phá công nghệ số
+        và ứng dụng trí tuệ nhân tạo vào học tập, nghiên cứu.
+      </p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-primary">
+          Xem dự án
+          <span>→</span>
+        </a>
+        <a href="#about" class="btn btn-secondary">
+          About Me
+          <span>↓</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Giới thiệu</span>
+        <h2 class="section-title">Về <span class="gradient-text">bản thân</span></h2>
+        <p class="section-description">
+          Tìm hiểu thêm về tôi, hành trình học tập và những mục tiêu mà tôi đang theo đuổi.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Personal Info -->
+        <div class="glass-card reveal">
+          <div class="about-avatar">👨‍💻</div>
+          <div class="info-item">
+            <div class="info-icon">🎓</div>
+            <div>
+              <div class="info-label">Họ và tên</div>
+              <div class="info-value">Lê Duy Hưng</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📚</div>
+            <div>
+              <div class="info-label">Ngành học</div>
+              <div class="info-value">Trí Tuệ Nhân Tạo</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🏫</div>
+            <div>
+              <div class="info-label">Trường</div>
+              <div class="info-value">Đại học Công nghệ - ĐHQGHN</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">💡</div>
+            <div>
+              <div class="info-label">Sở thích</div>
+              <div class="info-value">Lập trình, Đọc sách, Nghiên cứu AI, Thiết kế Web</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-value">lehung1110@gmail.com</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Motivation -->
+        <div class="reveal reveal-delay-2">
+          <div class="glass-card" style="margin-bottom: var(--space-lg);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: var(--space-md);">
+              🎯 Mục tiêu học tập
+            </h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8;">
+              Em mong muốn nắm vững các kỹ năng số cơ bản và nâng cao, từ quản lý tệp tin hiệu quả đến
+              ứng dụng AI có trách nhiệm. Qua đó, tôi hướng đến việc trở thành một chuyên gia công nghệ
+              có khả năng tư duy phản biện và sáng tạo trong thời đại số.
+            </p>
+          </div>
+          <div class="glass-card">
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: var(--space-md);">
+              📌 Định hướng phát triển
+            </h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8;">
+              Em đặc biệt quan tâm đến lĩnh vực trí tuệ nhân tạo và cách nó có thể được ứng dụng
+              trong giáo dục, nghiên cứu khoa học. Em luôn tìm kiếm cơ hội để thực hành và phát triển
+              tư duy giải quyết vấn đề thông qua các dự án thực tế.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Goals Section -->
+  <section class="section" id="goals">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Mục tiêu</span>
+        <h2 class="section-title">Mục tiêu của <span class="gradient-text">Portfolio</span></h2>
+        <p class="section-description">
+          Portfolio này được xây dựng với những mục đích rõ ràng, phục vụ cho việc học tập và phát triển cá nhân.
+        </p>
+      </div>
+
+      <div class="goals-grid">
+        <div class="glass-card goal-card reveal">
+          <span class="goal-icon">🏆</span>
+          <h3>Thể hiện kỹ năng số</h3>
+          <p>Tổng hợp và trình bày các kỹ năng công nghệ số đã học được qua môn học một cách có hệ thống.</p>
+        </div>
+        <div class="glass-card goal-card reveal reveal-delay-1">
+          <span class="goal-icon">📁</span>
+          <h3>Lưu trữ sản phẩm</h3>
+          <p>Xây dựng kho lưu trữ sản phẩm cá nhân, dễ dàng truy cập và chia sẻ với mọi người.</p>
+        </div>
+        <div class="glass-card goal-card reveal reveal-delay-2">
+          <span class="goal-icon">🚀</span>
+          <h3>Phát triển bản thân</h3>
+          <p>Ghi lại hành trình học tập, đánh giá sự tiến bộ và xác định hướng phát triển tương lai.</p>
+        </div>
+        <div class="glass-card goal-card reveal reveal-delay-3">
+          <span class="goal-icon">🌐</span>
+          <h3>Xây dựng thương hiệu</h3>
+          <p>Tạo dựng hình ảnh chuyên nghiệp trên không gian số, sẵn sàng cho sự nghiệp tương lai.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="section">
+    <div class="container">
+      <div class="stats-row reveal">
+        <div class="stat-item">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Bài tập hoàn thành</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Trang portfolio</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Kỹ năng số</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Học kỳ trải nghiệm</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Navigation to Projects -->
+  <section class="section" id="quick-nav">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Dự án</span>
+        <h2 class="section-title">Khám phá <span class="gradient-text">các bài tập</span></h2>
+        <p class="section-description">
+          Tổng hợp 6 bài tập thành phần từ môn Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Bài 1 -->
+        <div class="project-card reveal">
+          <div class="project-card-body">
+            <div class="project-card-icon purple">📂</div>
+            <span class="project-card-number">BÀI TẬP 01</span>
+            <h3 class="project-card-title">Quản lý tệp và thư mục</h3>
+            <p class="project-card-desc">Cấu trúc thư mục tối ưu, quy tắc đặt tên sáng tạo và tổ chức dữ liệu khoa học.
+            </p>
+            <a href="projects/bai1-file-management.html" class="project-card-link">
+              Xem chi tiết <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bài 2 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card-body">
+            <div class="project-card-icon emerald">🔍</div>
+            <span class="project-card-number">BÀI TẬP 02</span>
+            <h3 class="project-card-title">Tìm kiếm & đánh giá thông tin</h3>
+            <p class="project-card-desc">Sử dụng toán tử tìm kiếm nâng cao, phân tích sâu sắc chiến lược tìm kiếm.</p>
+            <a href="projects/bai2-search-evaluate.html" class="project-card-link">
+              Xem chi tiết <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bài 3 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-card-body">
+            <div class="project-card-icon blue">✨</div>
+            <span class="project-card-number">BÀI TẬP 03</span>
+            <h3 class="project-card-title">Viết Prompt hiệu quả</h3>
+            <p class="project-card-desc">Áp dụng thành thạo kỹ thuật Prompt Engineering, so sánh cơ chế hoạt động AI.
+            </p>
+            <a href="projects/bai3-prompt-engineering.html" class="project-card-link">
+              Xem chi tiết <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-2xl);" class="reveal">
+        <a href="projects.html" class="btn btn-secondary">
+          Xem tất cả dự án →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">✦ Portfolio Kỹ Thuật Số</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Giới thiệu</a></li>
+          <li><a href="projects.html">Dự án</a></li>
+          <li><a href="summary.html">Tổng kết</a></li>
+        </ul>
+        <p class="footer-text">
+          © 2025 Nguyễn Văn A — Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

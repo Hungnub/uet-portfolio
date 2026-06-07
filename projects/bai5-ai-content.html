@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bài tập 5: Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung số">
+  <title>Bài 5: AI Sáng tạo nội dung | Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">✦ Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Giới thiệu</a></li>
+        <li><a href="../projects.html" class="active">Dự án</a></li>
+        <li><a href="../summary.html">Tổng kết</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../projects.html">Dự án</a>
+        <span class="separator">/</span>
+        <span>Bài tập 5</span>
+      </nav>
+      <h1 class="page-title">
+        <span class="gradient-text">AI tạo sinh hỗ trợ sáng tạo nội dung</span>
+      </h1>
+      <p class="page-description">
+        Bài tập 5 của mục 5.4 — Trưng bày sản phẩm nội dung số hoàn thiện (hình ảnh, video, bài viết) 
+        được hỗ trợ bởi AI. Thể hiện khả năng tận dụng tối đa các công cụ AI.
+      </p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container" style="max-width: 900px;">
+
+      <!-- Mục tiêu -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🎯</span> Mục tiêu bài tập</h2>
+        <p>
+          Ứng dụng các công cụ Generative AI (AI tạo sinh) để hỗ trợ quá trình sáng tạo nội dung. 
+          Mục tiêu là kết hợp ý tưởng của con người với khả năng thực thi của AI để tạo ra 
+          sản phẩm truyền thông chất lượng cao, chuyên nghiệp.
+        </p>
+      </div>
+
+      <!-- Công cụ AI sử dụng -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🤖</span> Các công cụ AI đã sử dụng</h2>
+        <div class="goals-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+          <div class="glass-card" style="padding: var(--space-xl);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-sm);">ChatGPT / Gemini (Văn bản)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-md);">
+              Lên kịch bản, outline, viết nội dung bài blog và tạo prompt cho AI vẽ ảnh.
+            </p>
+          </div>
+          <div class="glass-card" style="padding: var(--space-xl);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-sm);">Midjourney / DALL-E (Hình ảnh)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-md);">
+              Tạo hình ảnh minh họa độc quyền, chất lượng cao dựa trên prompt chi tiết.
+            </p>
+          </div>
+          <div class="glass-card" style="padding: var(--space-xl);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-sm);">Canva (Thiết kế)</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: var(--space-md);">
+              Tổng hợp nội dung, dàn trang, thêm hiệu ứng đồ họa và xuất bản sản phẩm cuối.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quy trình thực hiện -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🔄</span> Quy trình sản xuất với AI</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Giai đoạn 1: Ideation (Lên ý tưởng)</div>
+            <div class="timeline-title">Brainstorming cùng AI</div>
+            <div class="timeline-desc">
+              Sử dụng ChatGPT để tìm kiếm 10 ý tưởng chủ đề bài viết. Chọn chủ đề: 
+              "Tương lai của Giáo dục đại học với AI". Yêu cầu AI lập outline 3 phần.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Giai đoạn 2: Text Generation</div>
+            <div class="timeline-title">Soạn thảo nội dung</div>
+            <div class="timeline-desc">
+              Tạo nội dung cho từng phần dựa trên outline. Đóng vai trò biên tập viên, 
+              chỉnh sửa lại văn phong để tự nhiên hơn, kiểm tra fact-check số liệu AI cung cấp.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Giai đoạn 3: Image Generation</div>
+            <div class="timeline-title">Tạo ảnh minh họa</div>
+            <div class="timeline-desc">
+              Dùng ChatGPT tạo prompt tiếng Anh tối ưu cho hình ảnh. Đưa prompt vào Midjourney 
+              để tạo ảnh phong cách "cyberpunk học đường". Lọc lấy ảnh đẹp nhất.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Giai đoạn 4: Post-Production</div>
+            <div class="timeline-title">Dàn trang & Hoàn thiện</div>
+            <div class="timeline-desc">
+              Đưa text và ảnh vào Canva. Sử dụng tính năng Magic Resize và Magic Write 
+              (nếu cần chỉnh sửa ngắn) của Canva. Xuất bản phẩm dạng PDF/Hình ảnh.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sản phẩm cuối -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🌟</span> Sản phẩm hoàn thiện</h2>
+        <div class="image-placeholder" style="min-height: 400px;">
+          <span class="ph-icon">🎨</span>
+          <span><strong>Thêm Poster / Bài viết hình ảnh tại đây</strong></span>
+          <span>Sản phẩm nội dung số hoàn thiện được AI hỗ trợ</span>
+        </div>
+
+        <div class="glass-card" style="margin-top: var(--space-lg);">
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-md);">Chi tiết Prompt đã dùng để tạo ảnh</h3>
+          <div class="code-block" style="margin-bottom: 0;">
+"A cinematic, futuristic classroom where a diverse group of college students 
+are interacting with floating holographic AI interfaces. Neon blue and purple 
+lighting, highly detailed, photorealistic, 8k resolution, Unreal Engine 5 render, 
+cyberpunk education theme --ar 16:9 --v 6.0"
+          </div>
+        </div>
+      </div>
+
+      <!-- Phân tích sâu -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🔬</span> Phân tích: Con người vs. AI</h2>
+        <div class="highlight-box emerald">
+          <h4>Sự phân chia vai trò hiệu quả</h4>
+          <p>
+            Trong dự án này, AI đóng vai trò <strong>"người thực thi siêu tốc"</strong> (tạo nháp text, vẽ ảnh nhanh), 
+            còn tôi đóng vai trò <strong>"giám đốc sáng tạo và biên tập"</strong> (định hướng ý tưởng, kiểm duyệt, tinh chỉnh). 
+            Đây là mô hình <em>Human-in-the-loop</em> hiệu quả nhất để tận dụng AI tạo sinh.
+          </p>
+        </div>
+        <p>
+          Thách thức lớn nhất là <strong>kiểm soát sự nhất quán</strong> của nội dung và hình ảnh. Đôi khi 
+          ảnh AI sinh ra có chi tiết lỗi (như bàn tay người), hoặc text của AI quá máy móc. Việc 
+          biên tập thủ công ở khâu cuối (Giai đoạn 4) là bắt buộc để có sản phẩm chuyên nghiệp.
+        </p>
+      </div>
+
+      <!-- Nhận xét -->
+      <div class="content-block reveal">
+        <h2><span class="icon">💭</span> Nhận xét cá nhân</h2>
+        <div class="glass-card reflection-card">
+          <div class="quote">
+            "AI không thay thế người sáng tạo, nó chỉ nâng cao năng suất của những người 
+            biết cách sử dụng nó để sáng tạo."
+          </div>
+          <p style="color: var(--text-secondary);">
+            Trải nghiệm này cho thấy rào cản kỹ thuật để tạo ra nội dung đẹp mắt đã giảm xuống gần như bằng 0. 
+            Trong tương lai, thứ tạo ra sự khác biệt không phải là khả năng dùng Photoshop hay viết văn trôi chảy, 
+            mà là <strong>tư duy sáng tạo, khả năng đặt câu hỏi đúng (prompting) và gu thẩm mỹ</strong> để đánh giá đầu ra.
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div style="display: flex; justify-content: space-between; margin-top: var(--space-3xl);" class="reveal">
+        <a href="bai4-collaboration.html" class="btn btn-secondary">← Bài tập 4</a>
+        <a href="bai6-responsible-ai.html" class="btn btn-primary">Bài tập 6 →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">✦ Portfolio Kỹ Thuật Số</div>
+        <p class="footer-text">© 2025 Nguyễn Văn A — Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

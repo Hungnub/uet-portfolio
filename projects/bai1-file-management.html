@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Bài tập 1: Thao tác cơ bản với tệp tin và thư mục - Cấu trúc thư mục tối ưu và quy tắc đặt tên">
+  <title>Bài 1: Quản lý tệp và thư mục | Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">✦ Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Giới thiệu</a></li>
+        <li><a href="../projects.html" class="active">Dự án</a></li>
+        <li><a href="../summary.html">Tổng kết</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../projects.html">Dự án</a>
+        <span class="separator">/</span>
+        <span>Bài tập 1</span>
+      </nav>
+      <h1 class="page-title">
+        <span class="gradient-text">Thao tác cơ bản với tệp tin và thư mục</span>
+      </h1>
+      <p class="page-description">
+        Bài tập 1 của mục 1.4 — Trình bày cấu trúc thư mục tối ưu và quy tắc đặt tên tệp đã thiết lập,
+        thể hiện sự hiểu sâu sắc về tổ chức dữ liệu.
+      </p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container" style="max-width: 900px;">
+
+      <!-- Mục tiêu -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🎯</span> Mục tiêu bài tập</h2>
+        <p>
+          Bài tập này yêu cầu sinh viên thiết lập một cấu trúc thư mục khoa học, logic cho việc quản lý
+          tệp tin trong quá trình học tập. Mục tiêu là rèn luyện tư duy tổ chức dữ liệu hiệu quả,
+          giúp tiết kiệm thời gian tìm kiếm và đảm bảo tính nhất quán trong quản lý tài liệu số.
+        </p>
+      </div>
+
+      <!-- Cấu trúc thư mục -->
+      <div class="content-block reveal">
+        <h2><span class="icon">📁</span> Cấu trúc thư mục đã thiết lập</h2>
+        <p>
+          Tôi đã thiết kế hệ thống thư mục theo nguyên tắc <strong>phân cấp logic</strong>,
+          chia theo học kỳ → môn học → loại tài liệu, giúp truy xuất nhanh chóng và mở rộng dễ dàng.
+        </p>
+
+        <div class="code-block">
+          <span class="label">Cấu trúc thư mục</span>
+          📦 UET/
+          ├── 📂 Semester-1/
+          │ ├── 📂 Mon-1_Giai-tich/
+          │ │ ├── 📂 Bai-giang/
+          │ │ ├── 📂 Bai-tap/
+          │ │ └── 📂 Tai-lieu-tham-khao/
+          │ └── 📂 Mon-2_Lap-trinh-C/
+          │ ├── 📂 Code/
+          │ ├── 📂 Bai-tap/
+          │ └── 📂 Du-an/
+          ├── 📂 Semester-2/
+          │ ├── 📂 NMCNS_Nhap-mon-Cong-nghe-so/
+          │ │ ├── 📂 Bai-giang/
+          │ │ ├── 📂 Bai-tap/
+          │ │ │ ├── 📂 BT1_Quan-ly-tep/
+          │ │ │ ├── 📂 BT2_Tim-kiem-thong-tin/
+          │ │ │ ├── 📂 BT3_Prompt-Engineering/
+          │ │ │ ├── 📂 BT4_Hop-tac-truc-tuyen/
+          │ │ │ ├── 📂 BT5_AI-sang-tao/
+          │ │ │ └── 📂 BT6_AI-co-trach-nhiem/
+          │ │ ├── 📂 Portfolio/
+          │ │ └── 📂 Tai-lieu/
+          │ └── 📂 Mon-khac/
+          └── 📂 Personal/
+          ├── 📂 Projects/
+          └── 📂 Resources/
+        </div>
+
+        <div class="highlight-box">
+          <h4>💡 Triết lý thiết kế</h4>
+          <p>
+            Cấu trúc được thiết kế theo nguyên tắc <strong>MECE</strong> (Mutually Exclusive, Collectively Exhaustive) —
+            mỗi thư mục có chức năng riêng biệt, không trùng lặp, nhưng khi kết hợp lại sẽ bao quát
+            toàn bộ dữ liệu cần quản lý. Điều này giúp tránh tình trạng trùng lặp tệp và
+            luôn biết chính xác vị trí của mọi tài liệu.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quy tắc đặt tên -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🏷️</span> Quy tắc đặt tên tệp tin</h2>
+        <p>
+          Tôi xây dựng bộ quy tắc đặt tên tệp nhất quán, dễ đọc và hỗ trợ sắp xếp tự động:
+        </p>
+
+        <div class="glass-card" style="margin-bottom: var(--space-lg);">
+          <h3>Công thức đặt tên</h3>
+          <div class="code-block" style="margin-bottom: var(--space-md);">
+            <span class="label">Format</span>
+            [LoạiTàiLiệu]_[MôTảNgắn]_[Ngày].[PhầnMởRộng]
+
+            Ví dụ:
+            • BaiTap_PhanTichDuLieu_20250315.docx
+            • Slide_Chuong3_AI_20250401.pdf
+            • Code_BaiTap2_TimKiem_v2.py
+            • Note_OnTapGiuaKy_20250510.md
+          </div>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="glass-card comparison-card before">
+            <div class="comparison-label">❌ Tên không tốt</div>
+            <ul style="list-style: none; padding: 0;">
+              <li style="color: var(--text-secondary); padding: 4px 0;">• bài tập 1.docx</li>
+              <li style="color: var(--text-secondary); padding: 4px 0;">• new document (2).pdf</li>
+              <li style="color: var(--text-secondary); padding: 4px 0;">• untitled.py</li>
+              <li style="color: var(--text-secondary); padding: 4px 0;">• final_FINAL_v3_real.docx</li>
+            </ul>
+          </div>
+          <div class="glass-card comparison-card after">
+            <div class="comparison-label">✅ Tên tối ưu</div>
+            <ul style="list-style: none; padding: 0;">
+              <li style="color: var(--text-secondary); padding: 4px 0;">• BT1_QuanLyTep_20250315.docx</li>
+              <li style="color: var(--text-secondary); padding: 4px 0;">• Slide_Chuong2_CNTT_20250320.pdf</li>
+              <li style="color: var(--text-secondary); padding: 4px 0;">• Code_SortAlgorithm_v1.py</li>
+              <li style="color: var(--text-secondary); padding: 4px 0;">• Report_GiuaKy_NMCNS_v2.docx</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ảnh minh họa -->
+      <div class="content-block reveal">
+        <h2><span class="icon">📸</span> Ảnh chụp minh họa</h2>
+        <p>Dưới đây là ảnh chụp màn hình thể hiện cấu trúc thư mục thực tế trên máy tính:</p>
+
+        <div class="image-placeholder">
+          <span class="ph-icon">🖼️</span>
+          <span><strong>Thêm ảnh chụp màn hình tại đây</strong></span>
+          <span>Ảnh chụp cấu trúc thư mục từ File Explorer / Finder</span>
+        </div>
+
+        <div class="image-placeholder">
+          <span class="ph-icon">🖼️</span>
+          <span><strong>Thêm ảnh chụp quy tắc đặt tên tại đây</strong></span>
+          <span>Ảnh minh họa các tệp tin đã đặt tên theo quy tắc</span>
+        </div>
+      </div>
+
+      <!-- Phân tích sâu -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🔬</span> Phân tích sâu về tổ chức dữ liệu</h2>
+
+        <div class="highlight-box emerald">
+          <h4>Tại sao tổ chức dữ liệu quan trọng?</h4>
+          <p>
+            Theo nghiên cứu, một nhân viên văn phòng trung bình mất khoảng <strong>2.5 giờ mỗi ngày</strong>
+            để tìm kiếm tài liệu. Với sinh viên, việc tổ chức dữ liệu tốt không chỉ tiết kiệm thời gian
+            mà còn giúp tư duy logic hơn — bởi cách bạn tổ chức thông tin phản ánh cách bạn
+            hiểu và xử lý thông tin đó.
+          </p>
+        </div>
+
+        <p>
+          Hệ thống thư mục tôi xây dựng tuân theo 3 nguyên tắc cốt lõi:
+        </p>
+        <ol>
+          <li>
+            <strong>Tính nhất quán (Consistency)</strong>: Mọi tệp đều tuân theo cùng một quy tắc đặt tên,
+            giúp dự đoán được tên tệp mà không cần tìm kiếm.
+          </li>
+          <li>
+            <strong>Tính phân cấp (Hierarchy)</strong>: Thư mục được chia từ tổng quát đến chi tiết
+            (Năm → Học kỳ → Môn → Loại tài liệu), phù hợp với tư duy phân loại tự nhiên.
+          </li>
+          <li>
+            <strong>Tính mở rộng (Scalability)</strong>: Cấu trúc có thể dễ dàng thêm học kỳ mới,
+            môn học mới mà không phá vỡ logic hiện có.
+          </li>
+        </ol>
+      </div>
+
+      <!-- Nhận xét -->
+      <div class="content-block reveal">
+        <h2><span class="icon">💭</span> Nhận xét cá nhân</h2>
+        <div class="glass-card reflection-card">
+          <div class="quote">
+            "Việc dành thời gian ban đầu để thiết kế hệ thống thư mục đã giúp tôi tiết kiệm
+            rất nhiều thời gian trong suốt học kỳ. Tôi không còn phải lo lắng về việc tìm kiếm
+            tài liệu hay lo mất dữ liệu quan trọng."
+          </div>
+          <p style="color: var(--text-secondary);">
+            Bài học lớn nhất từ bài tập này là: <strong>đầu tư vào hệ thống tổ chức ngay từ đầu</strong>
+            sẽ tạo ra hiệu quả gấp bội trong dài hạn. Đây cũng là tư duy có thể áp dụng vào
+            nhiều lĩnh vực khác như lập trình, quản lý dự án, và thậm chí là tổ chức cuộc sống.
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div style="display: flex; justify-content: space-between; margin-top: var(--space-3xl);" class="reveal">
+        <a href="../projects.html" class="btn btn-secondary">← Tất cả dự án</a>
+        <a href="bai2-search-evaluate.html" class="btn btn-primary">Bài tập 2 →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">✦ Portfolio Kỹ Thuật Số</div>
+        <p class="footer-text">© 2025 Nguyễn Văn A — Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

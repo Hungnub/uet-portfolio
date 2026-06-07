@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bài tập 2: Tìm kiếm và đánh giá thông tin học thuật bằng toán tử nâng cao">
+  <title>Bài 2: Tìm kiếm & Đánh giá thông tin | Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">✦ Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Giới thiệu</a></li>
+        <li><a href="../projects.html" class="active">Dự án</a></li>
+        <li><a href="../summary.html">Tổng kết</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../projects.html">Dự án</a>
+        <span class="separator">/</span>
+        <span>Bài tập 2</span>
+      </nav>
+      <h1 class="page-title">
+        <span class="gradient-text">Tìm kiếm và đánh giá thông tin học thuật</span>
+      </h1>
+      <p class="page-description">
+        Bài tập 2 của mục 2.4 — Sử dụng linh hoạt trên 4 toán tử tìm kiếm nâng cao, 
+        phân tích sâu sắc về chiến lược tìm kiếm và đánh giá.
+      </p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container" style="max-width: 900px;">
+
+      <!-- Mục tiêu -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🎯</span> Mục tiêu bài tập</h2>
+        <p>
+          Rèn luyện kỹ năng tìm kiếm thông tin học thuật hiệu quả, sử dụng các toán tử nâng cao 
+          trên Google và các công cụ tìm kiếm chuyên ngành. Đồng thời, phát triển khả năng đánh giá 
+          độ tin cậy và chất lượng của nguồn thông tin.
+        </p>
+      </div>
+
+      <!-- Toán tử tìm kiếm -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🔧</span> Các toán tử tìm kiếm đã sử dụng</h2>
+        <p>Tôi đã áp dụng linh hoạt <strong>6 toán tử</strong> khác nhau để tối ưu hóa kết quả tìm kiếm:</p>
+
+        <div class="goals-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+          <div class="glass-card" style="padding: var(--space-lg);">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">1️⃣</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
+              <code style="color: var(--accent-purple-light);">site:</code>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">
+              Tìm kiếm trong một trang web cụ thể, ví dụ: <code>site:scholar.google.com "artificial intelligence"</code>
+            </p>
+          </div>
+
+          <div class="glass-card" style="padding: var(--space-lg);">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">2️⃣</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
+              <code style="color: var(--accent-emerald-light);">filetype:</code>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">
+              Lọc kết quả theo loại tệp, ví dụ: <code>filetype:pdf "machine learning" tutorial</code>
+            </p>
+          </div>
+
+          <div class="glass-card" style="padding: var(--space-lg);">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">3️⃣</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
+              <code style="color: var(--accent-blue);">"..."</code> (Trích dẫn chính xác)
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">
+              Tìm cụm từ chính xác, ví dụ: <code>"natural language processing" applications</code>
+            </p>
+          </div>
+
+          <div class="glass-card" style="padding: var(--space-lg);">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">4️⃣</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
+              <code style="color: var(--accent-cyan);">-</code> (Loại trừ)
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">
+              Loại bỏ kết quả không mong muốn, ví dụ: <code>AI education -marketing -advertising</code>
+            </p>
+          </div>
+
+          <div class="glass-card" style="padding: var(--space-lg);">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">5️⃣</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
+              <code style="color: var(--accent-pink);">intitle:</code>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">
+              Tìm từ khóa trong tiêu đề, ví dụ: <code>intitle:"deep learning" review 2024</code>
+            </p>
+          </div>
+
+          <div class="glass-card" style="padding: var(--space-lg);">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">6️⃣</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
+              <code style="color: var(--accent-amber);">OR</code>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">
+              Kết hợp nhiều từ khóa, ví dụ: <code>("machine learning" OR "deep learning") education</code>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ví dụ tìm kiếm thực tế -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🔍</span> Ví dụ tìm kiếm thực tế</h2>
+        <p>Dưới đây là quá trình tìm kiếm thông tin về chủ đề <strong>"Ứng dụng AI trong giáo dục"</strong>:</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Bước 1</div>
+            <div class="timeline-title">Tìm kiếm tổng quan</div>
+            <div class="timeline-desc">
+              <code>"artificial intelligence" education site:scholar.google.com</code><br>
+              Kết quả: Hơn 2 triệu bài báo liên quan → cần thu hẹp phạm vi.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Bước 2</div>
+            <div class="timeline-title">Thu hẹp với filetype và thời gian</div>
+            <div class="timeline-desc">
+              <code>"AI in education" filetype:pdf 2023..2025</code><br>
+              Kết quả: Thu hẹp còn ~500 kết quả, tập trung vào tài liệu PDF gần đây.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Bước 3</div>
+            <div class="timeline-title">Loại trừ và tinh chỉnh</div>
+            <div class="timeline-desc">
+              <code>intitle:"AI in higher education" filetype:pdf -marketing site:.edu</code><br>
+              Kết quả: ~50 bài báo chất lượng cao từ các trường đại học.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-step">Bước 4</div>
+            <div class="timeline-title">Đánh giá và chọn lọc</div>
+            <div class="timeline-desc">
+              Áp dụng tiêu chí CRAAP (Currency, Relevance, Authority, Accuracy, Purpose) 
+              để đánh giá và chọn ra 5 nguồn tin chất lượng nhất.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ảnh chụp -->
+      <div class="content-block reveal">
+        <h2><span class="icon">📸</span> Ảnh chụp kết quả tìm kiếm</h2>
+        <div class="image-placeholder">
+          <span class="ph-icon">🖼️</span>
+          <span><strong>Thêm ảnh chụp kết quả Google Search tại đây</strong></span>
+          <span>Ảnh minh họa kết quả tìm kiếm với toán tử nâng cao</span>
+        </div>
+        <div class="image-placeholder">
+          <span class="ph-icon">🖼️</span>
+          <span><strong>Thêm ảnh chụp Google Scholar tại đây</strong></span>
+          <span>Ảnh minh họa kết quả từ Google Scholar</span>
+        </div>
+      </div>
+
+      <!-- Chiến lược tìm kiếm -->
+      <div class="content-block reveal">
+        <h2><span class="icon">🧠</span> Phân tích chiến lược tìm kiếm</h2>
+
+        <div class="highlight-box">
+          <h4>Chiến lược "Phễu lọc" (Funnel Strategy)</h4>
+          <p>
+            Tôi áp dụng chiến lược tìm kiếm theo hình phễu: bắt đầu từ phạm vi rộng rồi 
+            dần thu hẹp bằng các toán tử. Điều này giúp không bỏ sót kết quả quan trọng 
+            trong khi vẫn đảm bảo độ chính xác cao ở kết quả cuối cùng.
+          </p>
+        </div>
+
+        <div class="highlight-box emerald">
+          <h4>Bảng đánh giá nguồn tin (CRAAP Test)</h4>
+          <p>
+            Mỗi nguồn được đánh giá trên 5 tiêu chí: <strong>Tính thời sự</strong> (Currency), 
+            <strong>Sự liên quan</strong> (Relevance), <strong>Uy tín tác giả</strong> (Authority), 
+            <strong>Độ chính xác</strong> (Accuracy), và <strong>Mục đích</strong> (Purpose). 
+            Chỉ những nguồn đạt 4/5 tiêu chí trở lên mới được sử dụng.
+          </p>
+        </div>
+      </div>
+
+      <!-- Nhận xét -->
+      <div class="content-block reveal">
+        <h2><span class="icon">💭</span> Nhận xét cá nhân</h2>
+        <div class="glass-card reflection-card">
+          <div class="quote">
+            "Trước đây tôi chỉ đơn giản gõ từ khóa vào Google. Sau bài tập này, 
+            tôi đã biết cách biến Google thành một công cụ nghiên cứu thực sự mạnh mẽ."
+          </div>
+          <p style="color: var(--text-secondary);">
+            Kỹ năng tìm kiếm nâng cao không chỉ hữu ích trong học tập mà còn là một 
+            <strong>kỹ năng sống thiết yếu</strong> trong thời đại thông tin. Việc biết cách 
+            phân biệt nguồn tin đáng tin cậy giúp tôi tránh được thông tin sai lệch 
+            và ra quyết định tốt hơn.
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div style="display: flex; justify-content: space-between; margin-top: var(--space-3xl);" class="reveal">
+        <a href="bai1-file-management.html" class="btn btn-secondary">← Bài tập 1</a>
+        <a href="bai3-prompt-engineering.html" class="btn btn-primary">Bài tập 3 →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">✦ Portfolio Kỹ Thuật Số</div>
+        <p class="footer-text">© 2025 Nguyễn Văn A — Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

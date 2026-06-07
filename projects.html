@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tổng hợp 6 bài tập từ môn Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo">
+  <title>Dự Án | Portfolio Kỹ Thuật Số</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">✦ Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Giới thiệu</a></li>
+        <li><a href="projects.html" class="active">Dự án</a></li>
+        <li><a href="summary.html">Tổng kết</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        6 Bài tập thành phần
+      </div>
+      <h1 class="page-title">Các <span class="gradient-text">Dự Án</span></h1>
+      <p class="page-description">
+        Tập hợp và trình bày các bài tập đã hoàn thành từ môn Nhập môn Công nghệ số 
+        và Ứng dụng Trí tuệ nhân tạo. Mỗi bài tập đều thể hiện kỹ năng và quá trình học tập cụ thể.
+      </p>
+    </div>
+  </div>
+
+  <!-- Projects Grid -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="projects-grid">
+
+        <!-- Bài 1 -->
+        <div class="project-card reveal">
+          <div class="project-card-body">
+            <div class="project-card-icon purple">📂</div>
+            <span class="project-card-number">BÀI TẬP 01</span>
+            <h3 class="project-card-title">Thao tác cơ bản với tệp tin và thư mục</h3>
+            <p class="project-card-desc">
+              Trình bày cấu trúc thư mục tối ưu và quy tắc đặt tên tệp đã thiết lập, 
+              kèm ảnh chụp minh họa. Thể hiện sự hiểu sâu sắc về tổ chức dữ liệu.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Quản lý tệp</span>
+              <span class="tag">Tổ chức dữ liệu</span>
+              <span class="tag">Quy tắc đặt tên</span>
+            </div>
+            <a href="projects/bai1-file-management.html" class="project-card-link">
+              Xem chi tiết <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bài 2 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card-body">
+            <div class="project-card-icon emerald">🔍</div>
+            <span class="project-card-number">BÀI TẬP 02</span>
+            <h3 class="project-card-title">Tìm kiếm và đánh giá thông tin học thuật</h3>
+            <p class="project-card-desc">
+              Trình bày kết quả tìm kiếm học thuật bằng các toán tử nâng cao và bảng 
+              đánh giá nguồn tin đã thực hiện. Sử dụng linh hoạt trên 4 toán tử.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Toán tử tìm kiếm</span>
+              <span class="tag">Đánh giá nguồn</span>
+              <span class="tag">Nghiên cứu</span>
+            </div>
+            <a href="projects/bai2-search-evaluate.html" class="project-card-link">
+              Xem chi tiết <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bài 3 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-card-body">
+            <div class="project-card-icon blue">✨</div>
+            <span class="project-card-number">BÀI TẬP 03</span>
+            <h3 class="project-card-title">Viết Prompt hiệu quả cho các tác vụ học tập</h3>
+            <p class="project-card-desc">
+              Trình bày sự so sánh giữa Prompt ban đầu và Prompt cải tiến cùng kết quả 
+              đầu ra từ AI. Áp dụng thành thạo kỹ thuật Prompt Engineering.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Prompt Engineering</span>
+              <span class="tag">AI</span>
+              <span class="tag">So sánh</span>
+            </div>
+            <a href="projects/bai3-prompt-engineering.html" class="project-card-link">
+              Xem chi tiết <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bài 4 -->
+        <div class="project-card reveal">
+          <div class="project-card-body">
+            <div class="project-card-icon cyan">🤝</div>
+            <span class="project-card-number">BÀI TẬP 04</span>
+            <h3 class="project-card-title">Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</h3>
+            <p class="project-card-desc">
+              Trình bày minh chứng về việc sử dụng công cụ quản lý dự án nhóm 
+              và cách thức phối hợp trực tuyến. Tích hợp các tính năng nâng cao.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Hợp tác nhóm</span>
+              <span class="tag">Quản lý dự án</span>
+              <span class="tag">Trực tuyến</span>
+            </div>
+            <a href="projects/bai4-collaboration.html" class="project-card-link">
+              Xem chi tiết <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bài 5 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card-body">
+            <div class="project-card-icon pink">🎨</div>
+            <span class="project-card-number">BÀI TẬP 05</span>
+            <h3 class="project-card-title">Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h3>
+            <p class="project-card-desc">
+              Trưng bày sản phẩm nội dung số hoàn thiện (hình ảnh, video hoặc bài viết) 
+              được hỗ trợ bởi AI. Sản phẩm rất chuyên nghiệp và sáng tạo.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">AI tạo sinh</span>
+              <span class="tag">Nội dung số</span>
+              <span class="tag">Sáng tạo</span>
+            </div>
+            <a href="projects/bai5-ai-content.html" class="project-card-link">
+              Xem chi tiết <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bài 6 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-card-body">
+            <div class="project-card-icon amber">⚖️</div>
+            <span class="project-card-number">BÀI TẬP 06</span>
+            <h3 class="project-card-title">Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3>
+            <p class="project-card-desc">
+              Trình bày bộ nguyên tắc cá nhân rõ ràng về sử dụng AI có trách nhiệm 
+              dựa trên các nghiên cứu đã thực hiện. Tư duy phản biện cao.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Đạo đức AI</span>
+              <span class="tag">Nguyên tắc</span>
+              <span class="tag">Trách nhiệm</span>
+            </div>
+            <a href="projects/bai6-responsible-ai.html" class="project-card-link">
+              Xem chi tiết <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">✦ Portfolio Kỹ Thuật Số</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Giới thiệu</a></li>
+          <li><a href="projects.html">Dự án</a></li>
+          <li><a href="summary.html">Tổng kết</a></li>
+        </ul>
+        <p class="footer-text">
+          © 2025 Nguyễn Văn A — Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
