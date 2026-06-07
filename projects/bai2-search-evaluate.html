@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bài tập 2: Tìm kiếm và đánh giá thông tin học thuật bằng toán tử nâng cao">
-  <title>Bài 2: Tìm kiếm & Đánh giá thông tin | Portfolio</title>
+  <meta name="description"
+    content="Bài tập 2: Tìm kiếm và Đánh giá thông tin - Tiêu chí đánh giá độ tin cậy của tài liệu">
+  <title>Bài 2: Tìm kiếm & Đánh giá | Portfolio</title>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .eval-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 0.95rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .eval-table th, .eval-table td {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .eval-table th {
+      background: rgba(255, 255, 255, 0.08);
+      font-weight: 600;
+      color: var(--primary-color);
+      text-align: center;
+    }
+
+    .eval-table td ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .eval-table td ul li {
+      margin-bottom: 8px;
+    }
+    
+    .eval-table td strong {
+      color: var(--text-primary);
+    }
+    
+    .eval-score {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #10b981;
+      text-align: center;
+      display: block;
+    }
+  </style>
 </head>
+
 <body>
 
   <div class="bg-animation">
@@ -16,6 +69,7 @@
   </div>
   <canvas id="particles-canvas"></canvas>
 
+  <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo">✦ Portfolio</a>
@@ -32,6 +86,7 @@
     </div>
   </nav>
 
+  <!-- Page Header -->
   <div class="page-header">
     <div class="container">
       <nav class="breadcrumb">
@@ -40,194 +95,150 @@
         <span>Bài tập 2</span>
       </nav>
       <h1 class="page-title">
-        <span class="gradient-text">Tìm kiếm và đánh giá thông tin học thuật</span>
+        <span class="gradient-text">Tìm kiếm và Đánh giá thông tin</span>
       </h1>
       <p class="page-description">
-        Bài tập 2 của mục 2.4 — Sử dụng linh hoạt trên 4 toán tử tìm kiếm nâng cao, 
-        phân tích sâu sắc về chiến lược tìm kiếm và đánh giá.
+        Bài tập 2 trình bày các tiêu chí đánh giá độ tin cậy của tài liệu khoa học và phân tích chi tiết các nguồn dữ liệu thu thập được.
       </p>
     </div>
   </div>
 
+  <!-- Content -->
   <section class="section" style="padding-top: 0;">
-    <div class="container" style="max-width: 900px;">
+    <div class="container" style="max-width: 1100px;">
 
-      <!-- Mục tiêu -->
+      <!-- Tiêu chí -->
       <div class="content-block reveal">
-        <h2><span class="icon">🎯</span> Mục tiêu bài tập</h2>
-        <p>
-          Rèn luyện kỹ năng tìm kiếm thông tin học thuật hiệu quả, sử dụng các toán tử nâng cao 
-          trên Google và các công cụ tìm kiếm chuyên ngành. Đồng thời, phát triển khả năng đánh giá 
-          độ tin cậy và chất lượng của nguồn thông tin.
-        </p>
-      </div>
-
-      <!-- Toán tử tìm kiếm -->
-      <div class="content-block reveal">
-        <h2><span class="icon">🔧</span> Các toán tử tìm kiếm đã sử dụng</h2>
-        <p>Tôi đã áp dụng linh hoạt <strong>6 toán tử</strong> khác nhau để tối ưu hóa kết quả tìm kiếm:</p>
-
-        <div class="goals-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
-          <div class="glass-card" style="padding: var(--space-lg);">
-            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">1️⃣</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
-              <code style="color: var(--accent-purple-light);">site:</code>
-            </h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">
-              Tìm kiếm trong một trang web cụ thể, ví dụ: <code>site:scholar.google.com "artificial intelligence"</code>
-            </p>
-          </div>
-
-          <div class="glass-card" style="padding: var(--space-lg);">
-            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">2️⃣</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
-              <code style="color: var(--accent-emerald-light);">filetype:</code>
-            </h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">
-              Lọc kết quả theo loại tệp, ví dụ: <code>filetype:pdf "machine learning" tutorial</code>
-            </p>
-          </div>
-
-          <div class="glass-card" style="padding: var(--space-lg);">
-            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">3️⃣</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
-              <code style="color: var(--accent-blue);">"..."</code> (Trích dẫn chính xác)
-            </h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">
-              Tìm cụm từ chính xác, ví dụ: <code>"natural language processing" applications</code>
-            </p>
-          </div>
-
-          <div class="glass-card" style="padding: var(--space-lg);">
-            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">4️⃣</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
-              <code style="color: var(--accent-cyan);">-</code> (Loại trừ)
-            </h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">
-              Loại bỏ kết quả không mong muốn, ví dụ: <code>AI education -marketing -advertising</code>
-            </p>
-          </div>
-
-          <div class="glass-card" style="padding: var(--space-lg);">
-            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">5️⃣</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
-              <code style="color: var(--accent-pink);">intitle:</code>
-            </h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">
-              Tìm từ khóa trong tiêu đề, ví dụ: <code>intitle:"deep learning" review 2024</code>
-            </p>
-          </div>
-
-          <div class="glass-card" style="padding: var(--space-lg);">
-            <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">6️⃣</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: var(--space-sm);">
-              <code style="color: var(--accent-amber);">OR</code>
-            </h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">
-              Kết hợp nhiều từ khóa, ví dụ: <code>("machine learning" OR "deep learning") education</code>
-            </p>
-          </div>
+        <h2><span class="icon">⚖️</span> Tiêu chí đánh giá độ tin cậy</h2>
+        <p>Mỗi tài liệu thu thập được đánh giá khắt khe dựa trên 5 tiêu chí sau đây:</p>
+        
+        <div class="glass-card" style="margin-bottom: var(--space-xl);">
+          <ol style="line-height: 1.8; padding-left: 20px;">
+            <li><strong>Tác giả:</strong> Trình độ chuyên môn và cơ quan công tác.</li>
+            <li><strong>Cơ quan xuất bản:</strong> Mức độ uy tín của nhà xuất bản/tạp chí và quy trình phản biện đồng cấp (peer-review).</li>
+            <li><strong>Phương pháp nghiên cứu:</strong> Tính khoa học của phương pháp (thực nghiệm, khảo sát định lượng/định tính) và quy mô mẫu dữ liệu.</li>
+            <li><strong>Trích dẫn:</strong> Tầm ảnh hưởng của tài liệu trong giới học thuật (thông qua số lượng trích dẫn trên Google Scholar).</li>
+            <li><strong>Tính cập nhật:</strong> Ưu tiên tài liệu xuất bản từ năm 2022-2026, do tốc độ phát triển cực nhanh của công nghệ AI tạo sinh.</li>
+          </ol>
         </div>
       </div>
 
-      <!-- Ví dụ tìm kiếm thực tế -->
+      <!-- Bảng đánh giá -->
       <div class="content-block reveal">
-        <h2><span class="icon">🔍</span> Ví dụ tìm kiếm thực tế</h2>
-        <p>Dưới đây là quá trình tìm kiếm thông tin về chủ đề <strong>"Ứng dụng AI trong giáo dục"</strong>:</p>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-step">Bước 1</div>
-            <div class="timeline-title">Tìm kiếm tổng quan</div>
-            <div class="timeline-desc">
-              <code>"artificial intelligence" education site:scholar.google.com</code><br>
-              Kết quả: Hơn 2 triệu bài báo liên quan → cần thu hẹp phạm vi.
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-step">Bước 2</div>
-            <div class="timeline-title">Thu hẹp với filetype và thời gian</div>
-            <div class="timeline-desc">
-              <code>"AI in education" filetype:pdf 2023..2025</code><br>
-              Kết quả: Thu hẹp còn ~500 kết quả, tập trung vào tài liệu PDF gần đây.
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-step">Bước 3</div>
-            <div class="timeline-title">Loại trừ và tinh chỉnh</div>
-            <div class="timeline-desc">
-              <code>intitle:"AI in higher education" filetype:pdf -marketing site:.edu</code><br>
-              Kết quả: ~50 bài báo chất lượng cao từ các trường đại học.
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-step">Bước 4</div>
-            <div class="timeline-title">Đánh giá và chọn lọc</div>
-            <div class="timeline-desc">
-              Áp dụng tiêu chí CRAAP (Currency, Relevance, Authority, Accuracy, Purpose) 
-              để đánh giá và chọn ra 5 nguồn tin chất lượng nhất.
-            </div>
-          </div>
+        <h2><span class="icon">📊</span> Bảng đánh giá chi tiết các tài liệu</h2>
+        
+        <div style="overflow-x: auto;">
+          <table class="eval-table">
+            <thead>
+              <tr>
+                <th style="width: 5%;">STT</th>
+                <th style="width: 25%;">Tên tài liệu / Tác giả / Năm</th>
+                <th style="width: 15%;">Loại nguồn</th>
+                <th style="width: 10%;">Điểm tin cậy</th>
+                <th style="width: 25%;">Đánh giá chi tiết (Dựa trên 5 tiêu chí)</th>
+                <th style="width: 20%;">Ưu điểm & Nhược điểm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Item 1 -->
+              <tr>
+                <td style="text-align: center;">1</td>
+                <td><em>Programming Is Hard - Or at Least It Used to Be: Educational Opportunities and Challenges of AI Code Generation</em><br><br>(Becker et al., 2023)</td>
+                <td>Báo khoa học (Hội nghị ACM SIGCSE)</td>
+                <td><span class="eval-score">9.5/10</span></td>
+                <td>
+                  <ul>
+                    <li><strong>Tác giả:</strong> Các chuyên gia hàng đầu về CS Education.</li>
+                    <li><strong>Xuất bản:</strong> ACM - chuẩn peer-review gắt gao.</li>
+                    <li><strong>Phương pháp:</strong> Tổng quan phân tích sâu.</li>
+                    <li><strong>Trích dẫn:</strong> >300 lần.</li>
+                    <li><strong>Cập nhật:</strong> Rất mới (2023).</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><strong>Ưu:</strong> Toàn diện về cơ hội và thách thức của AI với sinh viên mới học.</li>
+                    <li><strong>Nhược:</strong> Thiếu số liệu thực nghiệm định lượng cụ thể trên diện rộng.</li>
+                  </ul>
+                </td>
+              </tr>
+              <!-- Item 2 -->
+              <tr>
+                <td style="text-align: center;">2</td>
+                <td><em>The Robots Are Coming: Exploring the Implications of OpenAI Codex on Introductory Programming</em><br><br>(Finnie-Ansley et al., 2022)</td>
+                <td>Báo khoa học (Hội nghị ACE)</td>
+                <td><span class="eval-score">9.0/10</span></td>
+                <td>
+                  <ul>
+                    <li><strong>Tác giả:</strong> Thuộc ĐH Auckland, có chuyên môn sâu.</li>
+                    <li><strong>Xuất bản:</strong> Kỷ yếu hội nghị ACE (uy tín).</li>
+                    <li><strong>Phương pháp:</strong> Chạy thực nghiệm Codex trên các bài tập Python cơ bản.</li>
+                    <li><strong>Trích dẫn:</strong> >400 lần.</li>
+                    <li><strong>Cập nhật:</strong> Giai đoạn đầu của bùng nổ LLMs (2022).</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><strong>Ưu:</strong> Có dữ liệu thực nghiệm rõ ràng chứng minh AI giải được 70% bài tập CS1.</li>
+                    <li><strong>Nhược:</strong> Mô hình Codex hiện đã cũ so với GPT-4 hiện tại.</li>
+                  </ul>
+                </td>
+              </tr>
+              <!-- Item 3 -->
+              <tr>
+                <td style="text-align: center;">3</td>
+                <td><em>Artificial Intelligence in Education: Promises and Implications for Teaching and Learning</em><br><br>(Holmes et al., 2023)</td>
+                <td>Sách chuyên khảo</td>
+                <td><span class="eval-score">8.5/10</span></td>
+                <td>
+                  <ul>
+                    <li><strong>Tác giả:</strong> Các nhà nghiên cứu từ ĐH College London.</li>
+                    <li><strong>Xuất bản:</strong> Center for Curriculum Redesign.</li>
+                    <li><strong>Phương pháp:</strong> Phân tích lý thuyết giáo dục.</li>
+                    <li><strong>Trích dẫn:</strong> Cao trong mảng giáo dục.</li>
+                    <li><strong>Cập nhật:</strong> 2023.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><strong>Ưu:</strong> Cung cấp khung lý thuyết vững chắc về đạo đức khi dùng AI.</li>
+                    <li><strong>Nhược:</strong> Không đi quá sâu vào khía cạnh lập trình kỹ thuật (C++/Python).</li>
+                  </ul>
+                </td>
+              </tr>
+              <!-- Item 4 -->
+              <tr>
+                <td style="text-align: center;">4</td>
+                <td><em>Research: quantifying GitHub Copilot's impact on developer productivity and happiness</em><br><br>(Kalliamvakou, 2022)</td>
+                <td>Nguồn mở Internet (Báo cáo)</td>
+                <td><span class="eval-score">8.0/10</span></td>
+                <td>
+                  <ul>
+                    <li><strong>Tác giả:</strong> Chuyên gia nghiên cứu tại chính GitHub.</li>
+                    <li><strong>Xuất bản:</strong> Trang chủ GitHub.</li>
+                    <li><strong>Phương pháp:</strong> Khảo sát và thực nghiệm thời gian code.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><strong>Ưu:</strong> Nguồn gốc dữ liệu trực tiếp từ công ty tạo ra công cụ.</li>
+                    <li><strong>Nhược:</strong> Có nguy cơ thiên lệch (bias) vì là báo cáo nội bộ của GitHub.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
-      <!-- Ảnh chụp -->
-      <div class="content-block reveal">
-        <h2><span class="icon">📸</span> Ảnh chụp kết quả tìm kiếm</h2>
-        <div class="image-placeholder">
-          <span class="ph-icon">🖼️</span>
-          <span><strong>Thêm ảnh chụp kết quả Google Search tại đây</strong></span>
-          <span>Ảnh minh họa kết quả tìm kiếm với toán tử nâng cao</span>
-        </div>
-        <div class="image-placeholder">
-          <span class="ph-icon">🖼️</span>
-          <span><strong>Thêm ảnh chụp Google Scholar tại đây</strong></span>
-          <span>Ảnh minh họa kết quả từ Google Scholar</span>
-        </div>
-      </div>
-
-      <!-- Chiến lược tìm kiếm -->
-      <div class="content-block reveal">
-        <h2><span class="icon">🧠</span> Phân tích chiến lược tìm kiếm</h2>
-
-        <div class="highlight-box">
-          <h4>Chiến lược "Phễu lọc" (Funnel Strategy)</h4>
-          <p>
-            Tôi áp dụng chiến lược tìm kiếm theo hình phễu: bắt đầu từ phạm vi rộng rồi 
-            dần thu hẹp bằng các toán tử. Điều này giúp không bỏ sót kết quả quan trọng 
-            trong khi vẫn đảm bảo độ chính xác cao ở kết quả cuối cùng.
-          </p>
-        </div>
-
-        <div class="highlight-box emerald">
-          <h4>Bảng đánh giá nguồn tin (CRAAP Test)</h4>
-          <p>
-            Mỗi nguồn được đánh giá trên 5 tiêu chí: <strong>Tính thời sự</strong> (Currency), 
-            <strong>Sự liên quan</strong> (Relevance), <strong>Uy tín tác giả</strong> (Authority), 
-            <strong>Độ chính xác</strong> (Accuracy), và <strong>Mục đích</strong> (Purpose). 
-            Chỉ những nguồn đạt 4/5 tiêu chí trở lên mới được sử dụng.
-          </p>
-        </div>
-      </div>
-
-      <!-- Nhận xét -->
-      <div class="content-block reveal">
-        <h2><span class="icon">💭</span> Nhận xét cá nhân</h2>
-        <div class="glass-card reflection-card">
-          <div class="quote">
-            "Trước đây tôi chỉ đơn giản gõ từ khóa vào Google. Sau bài tập này, 
-            tôi đã biết cách biến Google thành một công cụ nghiên cứu thực sự mạnh mẽ."
-          </div>
-          <p style="color: var(--text-secondary);">
-            Kỹ năng tìm kiếm nâng cao không chỉ hữu ích trong học tập mà còn là một 
-            <strong>kỹ năng sống thiết yếu</strong> trong thời đại thông tin. Việc biết cách 
-            phân biệt nguồn tin đáng tin cậy giúp tôi tránh được thông tin sai lệch 
-            và ra quyết định tốt hơn.
-          </p>
+      <!-- Ảnh minh họa gốc -->
+      <div class="content-block reveal" style="margin-top: 40px;">
+        <h2><span class="icon">📸</span> Ảnh gốc báo cáo</h2>
+        <p>Dưới đây là các hình ảnh trích xuất từ báo cáo gốc thể hiện bảng đánh giá trên:</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+          <img src="../images/bai2/eval3.png" alt="Bảng đánh giá tài liệu 1 và 2" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+          <img src="../images/bai2/eval1.png" alt="Bảng đánh giá tài liệu 3 và 4" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+          <img src="../images/bai2/eval2.png" alt="Đánh giá chi tiết tài liệu 4" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
         </div>
       </div>
 
@@ -240,15 +251,17 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">✦ Portfolio Kỹ Thuật Số</div>
-        <p class="footer-text">© 2025 Nguyễn Văn A — Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</p>
+        <p class="footer-text">© 2025 Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</p>
       </div>
     </div>
   </footer>
 
   <script src="../js/main.js"></script>
 </body>
+
 </html>
